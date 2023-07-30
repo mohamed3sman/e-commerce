@@ -47,19 +47,30 @@ class CustomProductWidget extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'Iphone 14 pro\nmax',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        Icon(
-                          Icons.star_rate_rounded,
-                          color: Colors.amber,
+                        Row(
+                          children: [
+                            Text(
+                              '4.5',
+                              style: TextStyle(
+                                color: kSecondryColor,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Icon(
+                              Icons.star_rate_rounded,
+                              color: kSecondryColor,
+                            ),
+                          ],
                         ),
                       ],
                     ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pure_commerce/constants/constants.dart';
+import 'package:pure_commerce/views/products_view/product_view.dart';
+import 'package:pure_commerce/views/tracking_view/tracking_view.dart';
 
 class OrderPlacedContainer extends StatefulWidget {
   const OrderPlacedContainer({super.key});
@@ -13,7 +15,7 @@ class _OrderPlacedContainerState extends State<OrderPlacedContainer> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(top: 130),
+        padding: const EdgeInsets.only(top: 120),
         child: Container(
           width: double.infinity,
           decoration: const BoxDecoration(
@@ -56,7 +58,12 @@ class _OrderPlacedContainerState extends State<OrderPlacedContainer> {
                           borderRadius: BorderRadius.circular(25),
                         ),
                         color: kPrimaryColor,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const TrackingView();
+                          }));
+                        },
                         child: const Text(
                           'Track Package',
                           style: TextStyle(
@@ -70,7 +77,10 @@ class _OrderPlacedContainerState extends State<OrderPlacedContainer> {
                     Expanded(
                       child: IconButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const ProductView();
+                          }));
                         },
                         icon: Icon(
                           Icons.home_outlined,
