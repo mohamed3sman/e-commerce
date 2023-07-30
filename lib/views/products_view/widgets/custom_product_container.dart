@@ -19,7 +19,7 @@ class _SmartPhoneContainerState extends State<SmartPhoneContainer> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(top: 100),
+        padding: const EdgeInsets.only(top: 130),
         child: Container(
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(

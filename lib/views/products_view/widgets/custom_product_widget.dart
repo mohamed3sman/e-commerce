@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pure_commerce/constants/constants.dart';
+import 'package:pure_commerce/views/order_placed_view/order_placed.dart';
 
 class CustomProductWidget extends StatelessWidget {
   const CustomProductWidget({super.key});
@@ -78,12 +79,20 @@ class CustomProductWidget extends StatelessWidget {
                         const SizedBox(
                           width: 40,
                         ),
-                        Text(
-                          'Add to cart',
-                          style: TextStyle(
-                            color: kPrimaryColor,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return const OrderPlaced();
+                            }));
+                          },
+                          child: Text(
+                            'Add to cart',
+                            style: TextStyle(
+                              color: kPrimaryColor,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ],
