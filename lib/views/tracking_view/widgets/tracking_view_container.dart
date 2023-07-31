@@ -3,6 +3,8 @@ import 'package:pure_commerce/constants/constants.dart';
 import 'package:order_tracker/order_tracker.dart';
 import 'package:pure_commerce/views/products_view/product_view.dart';
 
+import 'shipping_address_and_payment.dart';
+
 class TrackingViewContainer extends StatefulWidget {
   const TrackingViewContainer({super.key});
 
@@ -67,59 +69,7 @@ class _TrackingViewContainerState extends State<TrackingViewContainer> {
                   const SizedBox(
                     height: 30,
                   ),
-                  const Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        child: Column(
-                          children: [
-                            Text(
-                              'Shipping Address',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Menoufia\nMenouf\nTamalay\nSchools Street',
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          children: [
-                            Text(
-                              'Payment Method',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Cash on delivery',
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                  const ShippingAddressAndPayment(),
                   const SizedBox(
                     height: 10,
                   ),
